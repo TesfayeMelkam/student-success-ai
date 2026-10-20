@@ -1,0 +1,15 @@
+<div class="auth-card">
+  <h1 class="h3">{{ title }}</h1>
+  {% if message %}<p>{{ message }}</p>{% endif %}
+  {% if form %}
+  {% if form.non_field_errors %}<div class="alert alert-danger">{{ form.non_field_errors }}</div>{% endif %}
+  <form method="post" class="auth-form">
+    {% csrf_token %}
+    {{ form.as_div }}
+    <button class="btn btn-primary mt-3" type="submit">Continue</button>
+  </form>
+  {% elif validlink == False %}
+  <div class="alert alert-danger">This link is invalid or has expired. <a href="{% url 'accounts:password_reset' %}">Request a new one</a>.</div>
+  {% endif %}
+  <p class="mt-3 mb-0"><a href="{% url 'accounts:dashboard' %}">Back</a></p>
+</div>

@@ -1,0 +1,8 @@
+# Supported Python: 3.12 (3.11-3.13 should also work)
+# Phase 1 only needs the web stack. ML/API packages are added in Phases 3-4.
+Django>=5.2,<5.3
+python-dotenv>=1.0
+whitenoise>=6.7
+gunicorn>=22.0
+psycopg[binary]>=3.2
+ruff>=0.6

@@ -1,0 +1,3 @@
+{% extends "base.html" %}
+{% block title %}Page not found{% endblock %}
+{% block content %}<div class="empty-state"><i class="bi bi-question-circle"></i><h1 class="h4">Page not found</h1><p>That page does not exist.</p><a href="{% if user.is_authenticated %}{% url 'accounts:dashboard' %}{% else %}{% url 'landing' %}{% endif %}">Go back</a></div>{% endblock %}

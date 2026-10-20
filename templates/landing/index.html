@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="hero">
+  <h1>Notice difficulty early. Support students sooner.</h1>
+  <p class="lead">Student Success AI combines academic records, transparent prediction models, and a documented support workflow, so educators stay in charge of every decision.</p>
+  <div class="d-flex gap-2 flex-wrap">
+    <a class="btn btn-primary btn-lg" href="{% url 'accounts:login' %}">Sign in</a>
+    <a class="btn btn-outline-secondary btn-lg" href="{% url 'features' %}">What it will do</a>
+  </div>
+</section>
+<section class="principles">
+  <div><h2 class="h5">Estimates, not verdicts</h2><p>Every prediction carries its model version, date, and limitations, and invites human review.</p></div>
+  <div><h2 class="h5">Least-privilege access</h2><p>Students see their own records. Teachers see their courses. Checks run on the server.</p></div>
+  <div><h2 class="h5">Real evaluation</h2><p>Model metrics come from held-out data. Demonstration results are always labelled as such.</p></div>
+</section>
+{% endblock %}
